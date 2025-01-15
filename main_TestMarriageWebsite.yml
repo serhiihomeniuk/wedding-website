@@ -18,7 +18,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16' # Specify your Node.js version
+        node-version: '20' # Specify your Node.js version
 
     # Install dependencies and build the application
     - name: Install dependencies
@@ -30,6 +30,6 @@ jobs:
     - name: Deploy to Azure App Service
       uses: azure/webapps-deploy@v2
       with:
-        app-name: '<your-app-service-name>' # Replace with your Azure App Service name
+        app-name: 'TestMarriageWebsite' # Replace with your Azure App Service name
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: '.'  # Specify the directory of your app (default is root)
